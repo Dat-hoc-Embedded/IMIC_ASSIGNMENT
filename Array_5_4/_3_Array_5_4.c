@@ -1,5 +1,6 @@
 // Viết chương trình nhập vào số tự nhiên n
 #include <stdio.h>
+void Caculate(int n);
 int main(){
     int n;
     printf("Input natural number (n>=0): "); 
@@ -8,6 +9,9 @@ int main(){
         printf("Invalid!. Please re-enter: "); 
         scanf("%d",&n);
     }
+   Caculate(n);
+}
+void Caculate(int n){
     int count = 0;
     int reverse_n = 0;
     int sum = 0, digit;
@@ -24,5 +28,5 @@ int main(){
     printf("\nThe first digit of n: %d", digit);
     printf("\nSum of digits: %d", sum);
     printf("\nThe reverse number of n: %d", reverse_n);
-
 }
+

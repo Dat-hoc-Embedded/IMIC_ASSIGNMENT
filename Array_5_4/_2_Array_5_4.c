@@ -1,22 +1,33 @@
 #include <stdio.h>
-
+void SetupArray(int arr[], int ne);
+void ShowArray(int arr[], int ne);
+void Max_appear(int arr[], int ne);
 int main(){
     // input number element
     int ne;  
     printf("Input number element: ");
     scanf("%d", &ne);
     int arr[ne];
-    //input array
-    printf("Input integer array: ");
-    for (int i=0; i<ne;i++){
-        scanf("%d",&arr[i]);
-    }
-    // show array
+
+    SetupArray(arr, ne);
+    ShowArray(arr, ne);
+    Max_appear(arr, ne);
+
+}
+
+void SetupArray(int arr[], int ne){
+    /* -------- Enter array one dimension*/
+    printf("Enter the elements: ");
+    for (int i = 0; i < ne; i++)
+        scanf("%d", &arr[i]);
+}
+void ShowArray(int arr[], int ne){
     printf("Array you inputed: [\t");
     for (int i=0; i<ne; i++){
         printf("%d \t",arr[i]);
     };printf("]");
-
+}
+void Max_appear(int arr[], int ne){
     int _max = 1; // lưu số lần xuất hiện lớn nhất
     int count_index[ne] ; // Lưu số lần xuất hiện của từng phần tử
     for(int i = 0; i < ne ;i++){
